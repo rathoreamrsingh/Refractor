@@ -1,17 +1,21 @@
 package com.example.Refractor.bird;
 
+import com.example.Refractor.features.Flying;
 import com.example.Refractor.features.Singing;
 import com.example.Refractor.features.Walking;
+import com.example.Refractor.features.impl.FlyWithWings;
 import com.example.Refractor.features.impl.SingLikeCokooBird;
 import com.example.Refractor.features.impl.WalkWithTwoLegs;
 
 public class CokooBird extends Bird {
     private Walking walking;
     private Singing singing;
+    private Flying flying;
 
     public CokooBird() {
         this.walking = new WalkWithTwoLegs();
         this.singing = new SingLikeCokooBird();
+        this.flying = new FlyWithWings();
     }
 
     @Override
@@ -43,5 +47,10 @@ public class CokooBird extends Bird {
     @Override
     public String walk() {
         return this.walking.walk();
+    }
+
+    @Override
+    public String fly() {
+        return this.flying.flying();
     }
 }

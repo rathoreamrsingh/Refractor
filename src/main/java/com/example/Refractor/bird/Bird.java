@@ -3,11 +3,23 @@ package com.example.Refractor.bird;
 import com.example.Refractor.creature.Creature;
 
 public abstract class Bird implements Creature {
-    void fly() {
+    /*void fly() {
         System.out.println("I am flying");
+    }*/
+
+    public String sing() {
+        return "I am not sure about my singing";
     }
 
-    public abstract String sing();
+    public String walk() {
+        return "I am not sure about my walking";
+    }
 
-    public abstract String walk();
+    public String fly() {
+        return "I am not sure about my Flying";
+    }
+
+    public String swim() {
+        return "I am not sure about my swimming";
+    }
 }
