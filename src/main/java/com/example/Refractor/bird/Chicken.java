@@ -20,6 +20,16 @@ public class Chicken extends Bird{
         this.flying = flying;
     }
 
+    public Chicken(Singing singing) {
+        this.singing = singing;
+        this.flying = new HaveWingsButCannotFly();
+    }
+
+    public Chicken(Flying flying) {
+        this.singing = new SingCluckCluckLikeChicken();
+        this.flying = flying;
+    }
+
     @Override
     public String fly() {
         return this.flying.flying();
